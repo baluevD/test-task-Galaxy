@@ -6,6 +6,9 @@ body {
   height: 100%;
   min-height: 100vh;
   min-width: 176px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
   @extend %flex;
 }
@@ -16,10 +19,17 @@ body {
   header {
     height: 66vh;
     background: black;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     @extend %flex;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
+
     figure {
       margin-bottom: $margin-bot;
     }
@@ -28,14 +38,23 @@ body {
   nav {
     font-family: $content-font;
     width: 80%;
+    -ms-flex-item-align: center;
     align-self: center;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 
     ul {
       height: 4em;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
       align-items: center;
       @extend %flex;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1;
       @include link-not-style;
 
@@ -50,57 +69,91 @@ body {
   width: 100%;
   background: url("../images/background.png") no-repeat center center fixed;
   background-size: cover;
+
   header {
     padding: {
       top: 4em;
       left: 2em;
       bottom: 1em;
     }
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: end;
+    -ms-flex-align: end;
     align-items: flex-end;
     @extend %flex;
+
     figure {
       margin-right: 2em;
       margin-bottom: 1em;
-      // flex-grow: 1;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center;
     }
+
     nav {
       font-family: $content-font;
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: start;
+      -ms-flex-pack: start;
       justify-content: flex-start;
+      -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
       flex-grow: 1;
+
       ul {
+        -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
         flex-grow: 1;
         @extend %flex;
+
         li {
           position: relative;
           font-weight: bold;
           cursor: pointer;
+          -webkit-transition: color 0.3s;
           transition: color 0.3s;
           padding: 0.6em 0.5em; //0.8
           line-height: 27px;
+
           a {
             text-decoration: none;
             color: #949494;
-            &:hover,&:focus {
+
+            &:focus,
+            &:hover {
               color: white;
-              &::before, &::after {
+
+              &::after,
+              &::before {
                 opacity: 1;
+                -webkit-transform: translateY(0px);
                 transform: translateY(0px);
               }
             }
+
             &::before {
               top: 0;
+              -webkit-transform: translateY(-10px);
               transform: translateY(-10px);
             }
+
             &::after {
               bottom: 0;
+              -webkit-transform: translateY(10px);
               transform: translateY(10px);
             }
-            &::before, &::after {
+
+            &::after,
+            &::before {
               position: absolute;
               left: 0;
               width: 100%;
@@ -108,30 +161,42 @@ body {
               background: #fff;
               content: '';
               opacity: 0;
+              -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+              transition: opacity 0.3s, -webkit-transform 0.3s;
               transition: opacity 0.3s, transform 0.3s;
+              transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
             }
           }
         }
       }
     }
   }
+
   section {
     color: white;
     padding: 0 2.5em;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: flex-start;
+    -webkit-box-align: space-between;
+    -ms-flex-align: space-between;
     align-items: space-between;
     @extend %flex;
+
     dd {
       font-weight: 200;
       margin-bottom: 1em;
+
       &.toggle {
         padding-left: 0.75em;
         display: none;
       }
     }
+
     dt {
       margin-bottom: 0.5em;
       background: url("../images/plus.png") no-repeat left center;
+
       &.action {
         font-style: italic;
         font-size: 2em;
@@ -146,6 +211,7 @@ body {
 
 footer {
   @include footer-style;
+
   a {
     color: inherit;
   }
