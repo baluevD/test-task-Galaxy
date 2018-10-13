@@ -1,0 +1,165 @@
+@import 'reset','variables','mixins','extensions';
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto');
+
+body {
+  letter-spacing: 0.1em;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 176px;
+  flex-direction: column;
+  @extend %flex;
+}
+
+.home-page {
+  @extend %flex;
+
+  header {
+    height: 66vh;
+    background: black;
+    justify-content: center;
+    align-items: flex-end;
+    @extend %flex;
+    flex-grow: 1;
+    figure {
+      margin-bottom: $margin-bot;
+    }
+  }
+
+  nav {
+    font-family: $content-font;
+    width: 80%;
+    align-self: center;
+    flex: 1;
+
+    ul {
+      height: 4em;
+      justify-content: center;
+      align-items: center;
+      @extend %flex;
+      flex-grow: 1;
+      @include link-not-style;
+
+      li {
+        margin: auto 1%;
+      }
+    }
+  }
+}
+
+.services-page {
+  width: 100%;
+  background: url("../images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  header {
+    padding: {
+      top: 4em;
+      left: 2em;
+      bottom: 1em;
+    }
+    justify-content: center;
+    align-items: flex-end;
+    @extend %flex;
+    figure {
+      margin-right: 2em;
+      margin-bottom: 1em;
+      // flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+    nav {
+      font-family: $content-font;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      flex-grow: 1;
+      ul {
+        flex-grow: 1;
+        @extend %flex;
+        li {
+          position: relative;
+          font-weight: bold;
+          cursor: pointer;
+          transition: color 0.3s;
+          padding: 0.6em 0.5em; //0.8
+          line-height: 27px;
+          a {
+            text-decoration: none;
+            color: #949494;
+            &:hover,&:focus {
+              color: white;
+              &::before, &::after {
+                opacity: 1;
+                transform: translateY(0px);
+              }
+            }
+            &::before {
+              top: 0;
+              transform: translateY(-10px);
+            }
+            &::after {
+              bottom: 0;
+              transform: translateY(10px);
+            }
+            &::before, &::after {
+              position: absolute;
+              left: 0;
+              width: 100%;
+              height: 2px;
+              background: #fff;
+              content: '';
+              opacity: 0;
+              transition: opacity 0.3s, transform 0.3s;
+            }
+          }
+        }
+      }
+    }
+  }
+  section {
+    color: white;
+    padding: 0 2.5em;
+    justify-content: flex-start;
+    align-items: space-between;
+    @extend %flex;
+    dd {
+      font-weight: 200;
+      margin-bottom: 1em;
+      &.toggle {
+        padding-left: 0.75em;
+        display: none;
+      }
+    }
+    dt {
+      margin-bottom: 0.5em;
+      background: url("../images/plus.png") no-repeat left center;
+      &.action {
+        font-style: italic;
+        font-size: 2em;
+        font-weight: 600;
+        padding-left: 0.75em;
+        padding-bottom: 0.15em;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+footer {
+  @include footer-style;
+  a {
+    color: inherit;
+  }
+}
+
+footer a,
+footer p,
+nav a,
+section dd {
+  text-transform: uppercase;
+}
+
+.active {
+  text-transform: uppercase;
+  background: url("../images/minus.png") no-repeat left center;
+  font-style: normal;
+}

@@ -1,0 +1,22 @@
+@import 'variables';
+@mixin link-not-style {
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+@mixin footer-style {
+  font: {
+    family: $footer-font;
+    size: 0.7em;
+  }
+  color: $footer-color;
+  margin: {
+    bottom: $margin-bot;
+    top: 0.5em;
+  }
+  justify-content: center;
+  align-items: flex-end;
+  flex-grow: 1;
+  @extend %flex;
+}
