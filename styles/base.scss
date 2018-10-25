@@ -5,7 +5,6 @@ body {
   letter-spacing: 0.1em;
   height: 100%;
   min-height: 100vh;
-  min-width: 176px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -185,25 +184,20 @@ body {
 
     dd {
       font-weight: 200;
-      margin-bottom: 1em;
-
-      &.toggle {
-        padding-left: 0.75em;
-        display: none;
-      }
+      padding-left: 0.75em;
+      text-indent: 1em;
     }
 
     dt {
-      margin-bottom: 0.5em;
-      background: url("../images/plus.png") no-repeat left center;
+      font-style: italic;
+      font-size: 2em;
+      font-weight: 600;
+      padding-left: 0.75em;
+      padding-bottom: 0.15em;
+      cursor: pointer;
 
-      &.action {
-        font-style: italic;
-        font-size: 2em;
-        font-weight: 600;
-        padding-left: 0.75em;
-        padding-bottom: 0.15em;
-        cursor: pointer;
+      &:focus {
+        outline: 0;
       }
     }
   }
@@ -224,8 +218,20 @@ section dd {
   text-transform: uppercase;
 }
 
-.active {
-  text-transform: uppercase;
-  background: url("../images/minus.png") no-repeat left center;
-  font-style: normal;
+.ui-icon.iconOpen {
+  display: inline-block;
+  margin-right: 0.1em;
+  background: url("../images/minus.png") no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
+}
+
+.ui-icon.iconClosed {
+  display: inline-block;
+  margin-right: 0.1em;
+  background: url("../images/plus.png") no-repeat;
+  background-size: 16px;
+  width: 16px;
+  height: 16px;
 }
