@@ -5,13 +5,6 @@ $(function() {
   };
   $( "#accordion" ).accordion({
     icons: icons,
-    heightStyle: "fill"
-  });
-  $( "#accordion-resizer" ).resizable({
-      minHeight: 140,
-      minWidth: 176,
-      resize: function() {
-        $( "#accordion" ).accordion( "refresh" );
-      }
+    heightStyle: "content"
   });
 } );
