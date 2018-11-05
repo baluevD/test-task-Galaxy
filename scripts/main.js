@@ -14,4 +14,4 @@ $(function() {
       $("#accordion").accordion("refresh");
     }
   });
-})(jQuery);
+});

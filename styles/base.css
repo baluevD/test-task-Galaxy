@@ -39,7 +39,7 @@ nav ul {
   list-style: none;
 }
 
-body, .home-page, .home-page header, .home-page nav ul, .services-page header, .services-page header nav ul, .services-page section, footer {
+.page, .home-page, .home-page__header, .home-page .nav .menu, .services-page header, .services-page header nav ul, .services-page section, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -47,7 +47,7 @@ body, .home-page, .home-page header, .home-page nav ul, .services-page header, .
   flex-wrap: wrap;
 }
 
-body {
+.page {
   letter-spacing: 0.1em;
   height: 100%;
   min-height: 100vh;
@@ -58,7 +58,7 @@ body {
   flex-direction: column;
 }
 
-.home-page header {
+.home-page__header {
   height: 66vh;
   background: black;
   -webkit-box-pack: center;
@@ -72,11 +72,11 @@ body {
   flex-grow: 1;
 }
 
-.home-page header figure {
+.home-page__header__logo {
   margin-bottom: 2.5%;
 }
 
-.home-page nav {
+.home-page .nav {
   font-family: "Playfair Display", sans-serif;
   width: 80%;
   -ms-flex-item-align: center;
@@ -86,7 +86,7 @@ body {
   flex: 1;
 }
 
-.home-page nav ul {
+.home-page .nav .menu {
   height: 4em;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -99,13 +99,17 @@ body {
   flex-grow: 1;
 }
 
-.home-page nav ul a {
+.home-page .nav .menu a {
   text-decoration: none;
   color: inherit;
 }
 
-.home-page nav ul li {
+.home-page .nav .menu__item {
   margin: auto 1%;
+}
+
+.home-page .nav .menu__link {
+  text-transform: uppercase;
 }
 
 .services-page {
@@ -211,7 +215,7 @@ body {
 
 .services-page section {
   color: white;
-  padding: 0 2em;
+  padding: 0 0.6em;
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
@@ -239,7 +243,7 @@ body {
   outline: 0;
 }
 
-footer {
+.footer {
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
   color: #949494;
@@ -256,7 +260,12 @@ footer {
   flex-grow: 1;
 }
 
-footer a {
+.footer__info {
+  text-transform: uppercase;
+}
+
+.footer__privacy-link {
+  text-transform: uppercase;
   color: inherit;
 }
 

@@ -178,7 +178,7 @@
 
   section {
     color: white;
-    padding: 0 2em;
+    padding: 0 0.6em;
     -webkit-box-pack: start;
     -ms-flex-pack: start;
     justify-content: flex-start;
@@ -220,10 +220,9 @@
     color: inherit;
   }
 }
-/* footer a,
+footer a,
 footer p,
-nav a, */
-
+nav a,
 section dd {
   text-transform: uppercase;
 }
