@@ -39,7 +39,7 @@ nav ul {
   list-style: none;
 }
 
-.page, .home-page, .home-page__header, .home-page .nav .menu, .services-page header, .services-page header nav ul, .services-page section, .footer {
+.page, .home-page, .home-page .header, .home-page .nav .menu, .services-page .header, .services-page .header__nav .menu, .services-page .main-content-wrapper, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,7 +58,7 @@ nav ul {
   flex-direction: column;
 }
 
-.home-page__header {
+.home-page .header {
   height: 66vh;
   background: black;
   -webkit-box-pack: center;
@@ -72,8 +72,8 @@ nav ul {
   flex-grow: 1;
 }
 
-.home-page__header__logo {
-  margin-bottom: 2.5%;
+.home-page .header__logo {
+  margin-bottom: 1.5em;
 }
 
 .home-page .nav {
@@ -118,7 +118,7 @@ nav ul {
   background-size: cover;
 }
 
-.services-page header {
+.services-page .header {
   padding-top: 4em;
   padding-left: 2em;
   padding-bottom: 1em;
@@ -130,7 +130,7 @@ nav ul {
   align-items: flex-end;
 }
 
-.services-page header figure {
+.services-page .header__logo {
   margin-right: 2em;
   margin-bottom: 1em;
   display: -webkit-box;
@@ -141,7 +141,7 @@ nav ul {
   justify-content: center;
 }
 
-.services-page header nav {
+.services-page .header__nav {
   font-family: "Playfair Display", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -156,13 +156,13 @@ nav ul {
   flex-grow: 1;
 }
 
-.services-page header nav ul {
+.services-page .header__nav .menu {
   -webkit-box-flex: 1;
   -ms-flex-positive: 1;
   flex-grow: 1;
 }
 
-.services-page header nav ul li {
+.services-page .header__nav .menu__item {
   position: relative;
   font-weight: bold;
   cursor: pointer;
@@ -172,34 +172,35 @@ nav ul {
   line-height: 27px;
 }
 
-.services-page header nav ul li a {
+.services-page .header__nav .menu__link {
+  text-transform: uppercase;
   text-decoration: none;
   color: #949494;
 }
 
-.services-page header nav ul li a:focus, .services-page header nav ul li a:hover {
+.services-page .header__nav .menu__link:focus, .services-page .header__nav .menu__link:hover {
   color: white;
 }
 
-.services-page header nav ul li a:focus::after, .services-page header nav ul li a:focus::before, .services-page header nav ul li a:hover::after, .services-page header nav ul li a:hover::before {
+.services-page .header__nav .menu__link:focus::after, .services-page .header__nav .menu__link:focus::before, .services-page .header__nav .menu__link:hover::after, .services-page .header__nav .menu__link:hover::before {
   opacity: 1;
   -webkit-transform: translateY(0px);
   transform: translateY(0px);
 }
 
-.services-page header nav ul li a::before {
+.services-page .header__nav .menu__link::before {
   top: 0;
   -webkit-transform: translateY(-10px);
   transform: translateY(-10px);
 }
 
-.services-page header nav ul li a::after {
+.services-page .header__nav .menu__link::after {
   bottom: 0;
   -webkit-transform: translateY(10px);
   transform: translateY(10px);
 }
 
-.services-page header nav ul li a::after, .services-page header nav ul li a::before {
+.services-page .header__nav .menu__link::after, .services-page .header__nav .menu__link::before {
   position: absolute;
   left: 0;
   width: 100%;
@@ -213,7 +214,7 @@ nav ul {
   transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
-.services-page section {
+.services-page .main-content-wrapper {
   color: white;
   padding: 0 0.6em;
   -webkit-box-pack: start;
@@ -224,13 +225,7 @@ nav ul {
   align-items: space-between;
 }
 
-.services-page section dd {
-  font-weight: 200;
-  padding-left: 0.75em;
-  text-indent: 1em;
-}
-
-.services-page section dt {
+.services-page .main-content-wrapper .features-list__title {
   font-style: italic;
   font-size: 2em;
   font-weight: 600;
@@ -239,15 +234,22 @@ nav ul {
   cursor: pointer;
 }
 
-.services-page section dt:focus {
+.services-page .main-content-wrapper .features-list__title:focus {
   outline: 0;
+}
+
+.services-page .main-content-wrapper .features-list__desc {
+  text-transform: uppercase;
+  font-weight: 200;
+  padding-left: 0.75em;
+  text-indent: 1em;
 }
 
 .footer {
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
   color: #949494;
-  margin-bottom: 2.5%;
+  margin-bottom: 1.5em;
   margin-top: 0.5em;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
@@ -267,13 +269,6 @@ nav ul {
 .footer__privacy-link {
   text-transform: uppercase;
   color: inherit;
-}
-
-footer a,
-footer p,
-nav a,
-section dd {
-  text-transform: uppercase;
 }
 
 .ui-icon.iconOpen {
