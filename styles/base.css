@@ -39,7 +39,7 @@ nav ul {
   list-style: none;
 }
 
-.page, .home-page, .home-page .header, .home-page .nav .menu, .services-page .header, .services-page .header__nav .menu, .services-page .main-content-wrapper, .footer {
+.page, .home-page, .home-page .header, .home-page .nav .menu, .services-page .header, .services-page .header__nav .menu, .services-page .features-list, .footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -214,7 +214,7 @@ nav ul {
   transition: opacity 0.3s, transform 0.3s, -webkit-transform 0.3s;
 }
 
-.services-page .main-content-wrapper {
+.services-page .features-list {
   color: white;
   padding: 0 0.6em;
   -webkit-box-pack: start;
@@ -225,7 +225,7 @@ nav ul {
   align-items: space-between;
 }
 
-.services-page .main-content-wrapper .features-list__title {
+.services-page .features-list__title {
   font-style: italic;
   font-size: 2em;
   font-weight: 600;
@@ -234,11 +234,11 @@ nav ul {
   cursor: pointer;
 }
 
-.services-page .main-content-wrapper .features-list__title:focus {
+.services-page .features-list__title:focus {
   outline: 0;
 }
 
-.services-page .main-content-wrapper .features-list__desc {
+.services-page .features-list__desc {
   text-transform: uppercase;
   font-weight: 200;
   padding-left: 0.75em;

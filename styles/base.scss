@@ -177,7 +177,7 @@
     }
   }
 
-  .main-content-wrapper {
+  .features-list {
     color: white;
     padding: 0 0.6em;
     -webkit-box-pack: start;
@@ -188,26 +188,24 @@
     align-items: space-between;
     @extend %flex;
 
-    .features-list {
-      &__title {
-        font-style: italic;
-        font-size: 2em;
-        font-weight: 600;
-        padding-left: 0.75em;
-        padding-bottom: 0.15em;
-        cursor: pointer;
+    &__title {
+      font-style: italic;
+      font-size: 2em;
+      font-weight: 600;
+      padding-left: 0.75em;
+      padding-bottom: 0.15em;
+      cursor: pointer;
 
-        &:focus {
-          outline: 0;
-        }
+      &:focus {
+        outline: 0;
       }
+    }
 
-      &__desc {
-        text-transform: uppercase;
-        font-weight: 200;
-        padding-left: 0.75em;
-        text-indent: 1em;
-      }
+    &__desc {
+      text-transform: uppercase;
+      font-weight: 200;
+      padding-left: 0.75em;
+      text-indent: 1em;
     }
   }
 }
