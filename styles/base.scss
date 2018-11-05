@@ -1,7 +1,7 @@
 @import 'reset','variables','mixins','extensions';
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display|Roboto');
 
-body {
+.page {
   letter-spacing: 0.1em;
   height: 100%;
   min-height: 100vh;
@@ -16,7 +16,7 @@ body {
 .home-page {
   @extend %flex;
 
-  header {
+  &__header {
     height: 66vh;
     background: black;
     -webkit-box-pack: center;
@@ -30,12 +30,12 @@ body {
     -ms-flex-positive: 1;
     flex-grow: 1;
 
-    figure {
+    &__logo {
       margin-bottom: $margin-bot;
     }
   }
 
-  nav {
+  .nav {
     font-family: $content-font;
     width: 80%;
     -ms-flex-item-align: center;
@@ -44,7 +44,7 @@ body {
     -ms-flex: 1;
     flex: 1;
 
-    ul {
+    .menu {
       height: 4em;
       -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -58,8 +58,12 @@ body {
       flex-grow: 1;
       @include link-not-style;
 
-      li {
+      &__item {
         margin: auto 1%;
+      }
+
+      &__link {
+        text-transform: uppercase;
       }
     }
   }
@@ -204,17 +208,22 @@ body {
   }
 }
 
-footer {
+.footer {
   @include footer-style;
 
-  a {
+  &__info {
+    text-transform: uppercase;
+  }
+
+  &__privacy-link {
+    text-transform: uppercase;
     color: inherit;
   }
 }
-
-footer a,
+/* footer a,
 footer p,
-nav a,
+nav a, */
+
 section dd {
   text-transform: uppercase;
 }
