@@ -222,7 +222,6 @@ nav ul {
   justify-content: flex-start;
   -webkit-box-align: space-between;
   -ms-flex-align: space-between;
-  align-items: space-between;
 }
 
 .services-page .features-list__title {
