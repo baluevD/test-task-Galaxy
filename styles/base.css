@@ -220,8 +220,6 @@ nav ul {
   -webkit-box-pack: start;
   -ms-flex-pack: start;
   justify-content: flex-start;
-  -webkit-box-align: space-between;
-  -ms-flex-align: space-between;
 }
 
 .services-page .features-list__title {
