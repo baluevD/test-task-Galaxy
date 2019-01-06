@@ -4,12 +4,12 @@
     color: inherit;
   }
 }
-@mixin footer-style {
+@mixin copyright-style {
   font: {
-    family: $footer-font;
+    family: $copyright-font;
     size: 0.7em;
   }
-  color: $footer-color;
+  color: $copyright-color;
   margin: {
     bottom: $margin-bot;
     top: 0.5em;

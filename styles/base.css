@@ -39,7 +39,7 @@ nav ul {
   list-style: none;
 }
 
-.page, .home-page, .home-page .header, .home-page .nav .menu, .services-page .header, .services-page .header__nav .menu, .services-page .features-list, .footer {
+.page, .home-page, .home-page .header, .home-page .nav .menu, .services-page .header, .services-page .header__nav .menu, .services-page .features-list, .copyright {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -241,7 +241,7 @@ nav ul {
   text-indent: 1em;
 }
 
-.footer {
+.copyright {
   font-family: "Roboto", sans-serif;
   font-size: 0.7em;
   color: #949494;
@@ -258,11 +258,11 @@ nav ul {
   flex-grow: 1;
 }
 
-.footer__info {
+.copyright__info {
   text-transform: uppercase;
 }
 
-.footer__privacy-link {
+.copyright__privacy-link {
   text-transform: uppercase;
   color: inherit;
 }

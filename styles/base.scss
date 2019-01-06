@@ -206,8 +206,8 @@
   }
 }
 
-.footer {
-  @include footer-style;
+.copyright {
+  @include copyright-style;
 
   &__info {
     text-transform: uppercase;
