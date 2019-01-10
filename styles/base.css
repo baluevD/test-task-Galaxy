@@ -48,7 +48,7 @@ nav ul {
 }
 
 .page {
-  letter-spacing: 0.1em;
+  letter-spacing: .05em;
   height: 100%;
   min-height: 100vh;
   min-width: 176px;
